@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+
+/*Animação do loader*/
+.loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 130px 0;
+    perspective: 780px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #cecece;
+    z-index: 10;
+}
+
+.load-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.load-one {
+    left: 0%;
+    top: 0%;
+    border-bottom: 3px solid #0874c5;
+    animation: rotate1 1.15s linear infinite;
+}
+
+.load-two {
+    right: 0%;
+    top: 0%;
+    border-right: 3px solid #dd26ff;
+    animation: rotate2 1.15s 0.1s linear infinite;
+}
+
+.load-three {
+    right: 0%;
+    bottom: 0%;
+    border-top: 3px solid #0099ff;
+    animation: rotate3 1.15s 0.15s linear infinite;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(45deg) rotateY(45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotateX(-60deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(-60deg) rotateY(0deg) rotateZ(360deg);
+    }
+}
+
+.scale-on-hover {
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.scale-on-hover:hover {
+    transform: scale(1.15); /* Ajuste o valor conforme desejado */
+}
+
+/* Adiciona o cursor padrão (flecha) aos textos */
+.text-zinc-50 {
+    cursor: default;
+}
+
+h1 {
+    cursor:default
+}
